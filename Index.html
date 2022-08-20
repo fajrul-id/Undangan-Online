@@ -81,21 +81,46 @@
             <h1 class="article_title">Buku Tamu</h1>
             <article class="bukutamu">
                 <div class="BTform">
-                    <form>
+                    <form id="form_auth">
                         <div class="form_group">
-                            <input placeholder="Nama Lengkap" type="text" />
+                            <input autocomplete="off" id="namalengkap" placeholder="Nama Lengkap" type="text" />
                         </div>
                         <div class="form_group">
-                            <input placeholder="Nomor Telepon" type="number" />
+                            <input autocomplete="off" id="nomortelepon" placeholder="Nomor Telepon" type="number" />
                         </div>
                         <div class="form_group">
-                            <input placeholder="Email" type="email" />
+                            <input autocomplete="off" id="keterangan" placeholder="keterangan" type="text" />
                         </div>
-                        <div class="btn_group">
+                        <div class="form_group">
+                            <textarea id="alamat" placeholder="Alamat"></textarea>
+                        </div>
+                        <div class="btn_group justifybetween gap">
+                            <a id="myBtn"href="#list">List Buku Tamu</a>
                             <button type="submit">Kirim</button>
                         </div>
                 </div>
                 </form>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                    <table class="BTform list">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>No Handpohone</th>
+                        <th>Nama Lengkap</th>
+                        <th>Keterangan</th>
+                        <th>Alamat</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- disini nanti di render dari js  -->
+                    </tbody>
+                    </table>
+
+                    <a class="close">&times;</a>
+                    </div>
+                </div>
+            </article>
         </section>
         <!-- END BUKU TAMU  -->
         <!-- MAP  -->
@@ -143,6 +168,7 @@
         <!-- END GALLERY  -->
     </main>
     <!-- END MAIN CONTAINER -->
+    <script src="/assets/main.js"></script>
 </body>
 <footer>
     <p>
